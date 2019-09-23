@@ -14,7 +14,6 @@ class home extends Component {
 		axios
 			.get("/posts")
 			.then(res => {
-				console.log(res.data);
 				this.setState({
 					posts: res.data
 				});
