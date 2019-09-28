@@ -27,7 +27,7 @@ class Navbar extends Component {
 				<Toolbar className='nav-container'>
 					{authenticated ? (
 						<Fragment>
-							<MyButton tip='Post a Scream!'>
+							<MyButton tip='Create new Post !'>
 								<AddIcon />
 							</MyButton>
 							<Link to='/'>
