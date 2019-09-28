@@ -48,11 +48,8 @@ class login extends Component {
 	};
 
 	handleChange = event => {
-		let errors = this.state.errors.filter(item => item !== event.target.value);
-
 		this.setState({
-			[event.target.name]: event.target.value,
-			errors
+			[event.target.name]: event.target.value
 		});
 	};
 
@@ -139,6 +136,6 @@ const mapActionsToProps = {
 };
 
 export default connect(
-    mapStateToProps,
-    mapActionsToProps
-  )(withStyles(styles)(login));
+	mapStateToProps,
+	mapActionsToProps
+)(withStyles(styles)(login));

@@ -5,6 +5,7 @@ const initialState = {
 	errors: null
 };
 
+//Check errors and display loading
 export default function(state = initialState, action) {
 	switch (action.type) {
 		case SET_ERRORS:

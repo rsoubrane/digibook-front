@@ -7,6 +7,7 @@ const initialState = {
 	notifications: []
 };
 
+//Functions to set the sessions and the user
 export default function(state = initialState, action) {
 	switch (action.type) {
 		case SET_AUTHENTICATED:

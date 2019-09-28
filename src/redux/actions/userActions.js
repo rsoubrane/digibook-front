@@ -1,6 +1,7 @@
 import { SET_USER, SET_ERRORS, CLEAR_ERRORS, LOADING_UI } from "../types";
 import axios from "axios";
 
+//Log the user in
 export const loginUser = (userData, history) => dispatch => {
 	dispatch({ type: LOADING_UI });
 	axios
@@ -21,6 +22,7 @@ export const loginUser = (userData, history) => dispatch => {
 		});
 };
 
+//Get the user data
 export const getUserData = () => dispatch => {
 	axios
 		.get("/user")
