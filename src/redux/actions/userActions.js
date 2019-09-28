@@ -73,6 +73,17 @@ export const uploadImage = formData => dispatch => {
 		.catch(err => console.log(err));
 };
 
+//Edit user information
+export const editUserDetails = userDetails => dispatch => {
+	dispatch({ type: LOADING_USER });
+	axios
+		.post("/user", userDetails)
+		.then(() => {
+			dispatch(getUserData());
+		})
+		.catch(err => console.log(err));
+};
+
 //Set the authorization token in the headers
 const setAuthorizationHeader = token => {
 	const FBIdToken = `Bearer ${token}`;
